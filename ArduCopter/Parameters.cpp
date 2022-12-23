@@ -104,6 +104,23 @@ const AP_Param::Info Copter::var_info[] = {
     // @Bitmask: 0:Roll,1:Pitch,2:Yaw,3:AccelZ
     GSCALAR(gcs_pid_mask,           "GCS_PID_MASK",     0),
 
+    // @Param: FLIP_MODE
+    // @DisplayName: Flip Direction
+    // @Description: Direction of copter fo flip, adjust to desired direction
+    // @User: Advanced
+    // @Values: 0:Right,1:Left,2:Forward,3:Backward
+
+    GSCALAR(flip_mode,           "FLIP_MODE",     0),
+
+    // @Param: FLIP_THROTTLE
+    // @DisplayName: Throttle adjustement at end of Flip
+    // @Description: Throttle adjustment at end of flip
+    // @User: Advanced
+    // @Values: -1.0 - 1.0
+
+    GSCALAR(flip_throttle,           "FLIP_THROTTLE",     1.0),
+
+
 #if MODE_RTL_ENABLED == ENABLED
     // @Param: RTL_ALT
     // @DisplayName: RTL Altitude

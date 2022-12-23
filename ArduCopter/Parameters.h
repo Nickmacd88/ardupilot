@@ -202,8 +202,12 @@ public:
         k_param_attitude_control,
         k_param_pos_control,
         k_param_circle_nav,
-        k_param_loiter_nav,     // 105
+        k_param_loiter_nav,     // 105  
         k_param_custom_control,
+
+        //107: Flip mode parameters
+        k_param_flip_mode, 
+        k_param_flip_throttle,
 
         // 110: Telemetry control
         //
@@ -458,6 +462,10 @@ public:
     AP_Int8         fs_crash_check;
     AP_Float        fs_ekf_thresh;
     AP_Int16        gcs_pid_mask;
+
+    AP_Int8         flip_mode;
+    AP_Float        flip_throttle;
+
 
 #if MODE_THROW_ENABLED == ENABLED
     AP_Enum<ModeThrow::PreThrowMotorState>         throw_motor_start;
