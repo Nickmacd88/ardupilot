@@ -196,6 +196,8 @@
 // flip - fly vehicle in flip in pitch and roll direction mode
 #ifndef MODE_FLIP_ENABLED
 # define MODE_FLIP_ENABLED ENABLED
+# define FLIP_MODE FLIP_LEFT
+# define FLIP_THROTTLE 0.0f
 #endif
 
 //////////////////////////////////////////////////////////////////////////////

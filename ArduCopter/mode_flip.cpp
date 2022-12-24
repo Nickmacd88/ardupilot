@@ -82,16 +82,16 @@ bool ModeFlip::init(bool ignore_checks)
     // this will default to a left flip if the flip_roll parameter is out of bounds (0-3).
     else {
         switch(g.flip_mode){
-            case 0:
+            case FLIP_LEFT:
                 roll_dir = FLIP_ROLL_LEFT;
                 break;
-            case 1:
+            case FLIP_RIGHT:
                 roll_dir = FLIP_ROLL_RIGHT;
                 break;
-            case 2:
+            case FLIP_FWD:
                 pitch_dir = FLIP_PITCH_FORWARD;
                 break;
-            case 3:
+            case FLIP_BACK:
                 pitch_dir = FLIP_PITCH_BACK;
                 break;
             // default to the left in case flip_mode parameter is out of bounds for any reason
