@@ -205,9 +205,9 @@ void ModeFlip::run()
         // reset throttle to original pilot input +/- desired throttle adjustment on exit
         // this is sanity-checked to ensure the flight mode is only passing throttle inputs between 0 - 1.0
         if(g.flip_throttle>= 0){
-            throttle_out = MAX(_flip_start_throttle + g.flip_throttle, 1.0f);            
+            throttle_out = MIN(_flip_start_throttle + g.flip_throttle, 1.0f);            
         } else {
-            throttle_out = MIN(_flip_start_throttle + g.flip_throttle, 0.0f);
+            throttle_out = MAX(_flip_start_throttle + g.flip_throttle, 0.0f);
         }
 
         float recovery_angle;
